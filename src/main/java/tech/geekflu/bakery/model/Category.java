@@ -4,15 +4,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+@Builder
 @Getter
 @Setter
-@Builder
-public class Item {
+public class Category {
   private Long id;
   private String name;
-  private String description;
-  private float price;
-  private String image;
   private boolean isActive;
-  private Category category;
+
 }
