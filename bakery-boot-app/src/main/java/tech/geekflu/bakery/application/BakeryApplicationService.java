@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 public class BakeryApplicationService {
 
-  private final Category flatBreads = Category.builder().name("Flatbreads, Pitas & Pizzacrusts").isActive(true).id(1L).build();
+  private final Category flatBreads = Category.builder().name("Flat breads, Pitas & Pizza crusts").isActive(true).id(1L).build();
   private final Category cakes = Category.builder().name("Cakes and Cupcakes").isActive(true).id(2L).build();
   private final Category buns = Category.builder().name("Buns, Breads & Rolls").isActive(true).id(3L).build();
   private final Category desserts = Category.builder().name("Desserts & Pastries").isActive(true).id(4L).build();
