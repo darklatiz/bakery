@@ -8,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Builder
 public class Item {
+
   private Long id;
   private String name;
   private String description;
@@ -15,4 +16,6 @@ public class Item {
   private String image;
   private boolean isActive;
   private Category category;
+
+
 }
