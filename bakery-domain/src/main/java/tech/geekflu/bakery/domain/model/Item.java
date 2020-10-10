@@ -1,4 +1,4 @@
-package tech.geekflu.bakery.model;
+package tech.geekflu.bakery.domain.model;
 
 import lombok.Builder;
 import lombok.Getter;

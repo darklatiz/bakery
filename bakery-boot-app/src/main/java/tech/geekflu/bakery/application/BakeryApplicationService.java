@@ -1,8 +1,8 @@
 package tech.geekflu.bakery.application;
 
 import org.springframework.stereotype.Component;
-import tech.geekflu.bakery.model.Category;
-import tech.geekflu.bakery.model.Item;
+import tech.geekflu.bakery.domain.model.Category;
+import tech.geekflu.bakery.domain.model.Item;
 
 import java.util.List;
 
