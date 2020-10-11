@@ -1,4 +1,4 @@
-1. We create a Volume for the docker contatiner
+1. We create a Volume for the docker container
 sudo docker create -v /var/lib/postgresql/data --name PostgresData alpine
 
 2. We pull a postgresql container using the volume created in step 1

@@ -22,21 +22,17 @@ alter table bakery.category
 
 create table bakery.item
 (
-	id int not null,
-	name varchar(150) not null,
-	price decimal(12,4) not null,
-	quantity int not null,
-	unit_of_measurement varchar(15) not null
+	id int not null
+		constraint item_pk
+			primary key,
+	name varchar(50) not null,
+	description varchar(200) not null,
+	price decimal(10,2) not null,
+	image varchar(250),
+	is_active bool default false
 );
 
 comment on table bakery.item is 'item table, which contains information about the items being soid';
-
-create unique index item_id_uindex
-	on bakery.item (id);
-
-alter table bakery.item
-	add constraint item_pk
-		primary key (id);
 
 
 create table bakery.catalog_information
