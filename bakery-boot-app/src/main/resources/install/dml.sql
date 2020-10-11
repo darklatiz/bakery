@@ -7,22 +7,19 @@ comment on sequence bakery.general_id_sequence is 'General sequence for all the 
 
 create table bakery.category
 (
-	id int not null,
-	name varchar(50) not null,
+	id int default nextval('bakery.general_id_sequence')
+		constraint category_pk
+			primary key,
+	name varchar(250) not null,
 	is_active bool default false
 );
 
-create unique index category_id_uindex
-	on bakery.category (id);
 
-alter table bakery.category
-	add constraint category_pk
-		primary key (id);
 
 
 create table bakery.item
 (
-	id int not null
+	id int default nextval('bakery.general_id_sequence')
 		constraint item_pk
 			primary key,
 	name varchar(50) not null,
