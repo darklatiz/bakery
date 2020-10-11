@@ -4,6 +4,22 @@ logging:
       springframework: INFO
 
 spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bakerydb
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: admin
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+
+---
+
+spring:
+  profiles: test
   h2:
     console:
       enabled: true
