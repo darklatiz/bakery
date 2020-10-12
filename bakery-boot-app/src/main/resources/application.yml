@@ -20,13 +20,14 @@ spring:
 
 spring:
   profiles: test
-  h2:
-    console:
-      enabled: true
   datasource:
-    url: jdbc:h2:file:/home/musashi/Documents/proyectos/java/h2db/bakery
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
-  jpa:
-    database-platform: orh.hibernate.dialect.H2Dialect
+    url: jdbc:postgresql://localhost:5432/bakerydb
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: admin
+    jpa:
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate:
+        ddl-auto: none
