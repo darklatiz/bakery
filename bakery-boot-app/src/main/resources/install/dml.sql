@@ -14,9 +14,6 @@ create table bakery.category
 	is_active bool default false
 );
 
-
-
-
 create table bakery.item
 (
 	id int default nextval('bakery.general_id_sequence')
@@ -24,9 +21,7 @@ create table bakery.item
 			primary key,
 	name varchar(50) not null,
 	description varchar(200) not null,
-	price decimal(10,2) not null,
-	image varchar(250),
-	is_active bool default false
+	price decimal(10,2) not null
 );
 
 comment on table bakery.item is 'item table, which contains information about the items being soid';
