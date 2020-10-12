@@ -1,4 +1,4 @@
-create table bakery."Order"
+create table bakery."order"
 (
     id              int,
     item_catalog_id int,
@@ -14,11 +14,11 @@ create table bakery."Order"
         primary key (id, item_catalog_id)
 );
 
-comment on column bakery."Order".order_type is 'TAKE OUT
+comment on column bakery."order".order_type is 'TAKE OUT
 TAKE IN
 UBER EATS';
 
-comment on column bakery."Order".status is '''ORDERED''
+comment on column bakery."order".status is '''ORDERED''
 ''IN PROCESS''
 ''CANCEL''
 ''FINISHED''';
