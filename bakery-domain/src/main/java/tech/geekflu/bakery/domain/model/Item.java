@@ -1,8 +1,10 @@
 package tech.geekflu.bakery.domain.model;
 
 import lombok.*;
+import tech.geekflu.bakery.domain.model.type.UOM;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -10,9 +12,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "item", schema = "bakery")
+@Table(name = "catalog_information", schema = "bakery")
 public class Item {
-
   @Id
   private Long id;
   @Column
@@ -25,8 +26,14 @@ public class Item {
   private String image;
   @Column
   private boolean isActive;
+  @Enumerated(EnumType.ORDINAL)
+  private UOM uom;
+  @Column
+  private float weight;
+  @Column
+  private int quantityAvailable;
+  @Column
+  private Date fdAdded;
   @Transient
   private Category category;
-
-
 }

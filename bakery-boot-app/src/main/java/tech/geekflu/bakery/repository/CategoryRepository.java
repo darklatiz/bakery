@@ -12,4 +12,5 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
   @Query(value = "SELECT nextval('bakery.general_id_sequence')", nativeQuery = true)
   Long getNextSeriesId();
 
+
 }
