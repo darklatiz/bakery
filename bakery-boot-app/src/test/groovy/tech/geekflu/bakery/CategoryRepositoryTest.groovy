@@ -3,15 +3,11 @@ package tech.geekflu.bakery
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.context.ContextConfiguration
-import org.testcontainers.spock.Testcontainers
 import tech.geekflu.bakery.domain.model.Category
 import tech.geekflu.bakery.repository.CategoryRepository
 
 @SpringBootTest
-@Testcontainers
 @DataJpaTest
-@ContextConfiguration(initializers = CategoryRepositoryTest.PropertiesInitializer.class)
 class CategoryRepositoryTest extends BasicSpecification {
 
     @Autowired
