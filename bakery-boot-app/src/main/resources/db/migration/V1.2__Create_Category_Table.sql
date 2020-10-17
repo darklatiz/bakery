@@ -1,4 +1,4 @@
-create table bakery.category
+create table if not exists bakery.category
 (
     id        int  default nextval('bakery.general_id_sequence')
         constraint category_pk

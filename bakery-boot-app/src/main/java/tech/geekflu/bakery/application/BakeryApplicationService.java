@@ -2,8 +2,8 @@ package tech.geekflu.bakery.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import tech.geekflu.bakery.domain.model.CatalogInformation;
 import tech.geekflu.bakery.domain.model.Category;
-import tech.geekflu.bakery.domain.model.Item;
 import tech.geekflu.bakery.repository.CategoryRepository;
 import tech.geekflu.bakery.repository.ItemRepository;
 
@@ -22,7 +22,7 @@ public class BakeryApplicationService {
     return categoryRepository.findByIsActive(includeInactive);
   }
 
-  public List<Item> getAllItemsInCatalog(boolean includeInactive) {
+  public List<CatalogInformation> getAllItemsInCatalog(boolean includeInactive) {
     return itemRepository.findByIsActive(includeInactive);
   }
 
