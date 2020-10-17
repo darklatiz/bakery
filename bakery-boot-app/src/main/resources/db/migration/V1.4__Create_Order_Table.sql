@@ -1,4 +1,4 @@
-create table bakery."order"
+create table if not exists bakery."order"
 (
     id              int,
     item_catalog_id int,

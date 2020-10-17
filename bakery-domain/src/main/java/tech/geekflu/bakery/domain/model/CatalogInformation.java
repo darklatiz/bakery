@@ -23,7 +23,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "catalog_information", schema = "bakery")
-public class Item {
+public class CatalogInformation {
   @Id
   private Long id;
   @Column
