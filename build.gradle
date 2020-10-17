@@ -50,6 +50,10 @@ subprojects {
 		testCompileOnly 'org.projectlombok:lombok:1.18.12'
 		testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
 
+		// https://mvnrepository.com/artifact/io.zonky.test/embedded-database-spring-test
+		compile group: 'io.zonky.test', name: 'embedded-database-spring-test', version: '1.5.5'
+
+
 		testImplementation('org.springframework.boot:spring-boot-starter-test') {
 			exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 		}
