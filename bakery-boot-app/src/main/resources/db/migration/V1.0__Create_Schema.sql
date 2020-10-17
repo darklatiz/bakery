@@ -1,4 +1,4 @@
-create schema if not exists bakery;
+create schema bakery;
 
 -- auto-generated definition
 create sequence if not exists general_id_sequence

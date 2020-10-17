@@ -1,6 +1,6 @@
 create table if not exists bakery."order"
 (
-    id              int,
+    id              int constraint order_pk primary key ,
     item_catalog_id int,
     name            varchar(250) not null,
     total           decimal(8, 2),
@@ -8,10 +8,9 @@ create table if not exists bakery."order"
     tax_amount      decimal(8, 2),
     fd_ordered      date,
     order_type      int,
+
     status          varchar(30) default 'ORDERED',
-    reason_status   text,
-    constraint order_pk
-        primary key (id, item_catalog_id)
+    reason_status   text
 );
 
 comment on column bakery."order".order_type is 'TAKE OUT
