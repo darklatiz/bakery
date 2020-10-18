@@ -44,6 +44,7 @@ public class CatalogInformation {
   private int quantityAvailable;
   @Column
   private Date fdAdded;
+
   @Transient
   private Category category;
 
