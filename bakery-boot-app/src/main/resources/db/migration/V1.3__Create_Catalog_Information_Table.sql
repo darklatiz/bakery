@@ -14,3 +14,10 @@ create table if not exists bakery.catalog_information
     fd_added           date
 );
 
+alter table bakery.catalog_information
+    add category_id int;
+
+alter table bakery.catalog_information
+    add constraint catalog_information_category_id_fk
+        foreign key (category_id) references bakery.category;
+

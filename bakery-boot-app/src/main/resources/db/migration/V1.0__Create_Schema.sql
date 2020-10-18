@@ -1,1 +1,1 @@
-create schema bakery;
+create schema if not exists bakery;
