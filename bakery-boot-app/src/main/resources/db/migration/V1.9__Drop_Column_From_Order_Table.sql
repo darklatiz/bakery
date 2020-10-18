@@ -1,0 +1,1 @@
+alter table bakery."order" drop column item_catalog_id;
