@@ -1,5 +1,8 @@
 package tech.geekflu.bakery.domain.model;
 
+import lombok.Builder;
+import lombok.Getter;
+import lombok.Setter;
 import tech.geekflu.bakery.domain.model.type.OrderType;
 import tech.geekflu.bakery.domain.model.type.StatusType;
 
@@ -12,6 +15,9 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
 
+@Builder
+@Getter
+@Setter
 @Entity
 @Table(name = "order", schema = "bakery")
 public class Order {
@@ -35,14 +41,15 @@ public class Order {
   private Date fdOrdered;
 
   @Column(name = "order_type")
-  @Enumerated(EnumType.ORDINAL)
+  @Enumerated(EnumType.STRING)
   private OrderType orderType;
 
   @Column(name = "status")
-  @Enumerated(EnumType.ORDINAL)
+  @Enumerated(EnumType.STRING)
   private StatusType statusType;
 
   @Column(name = "reason_status")
   private String comments;
+
 
 }
