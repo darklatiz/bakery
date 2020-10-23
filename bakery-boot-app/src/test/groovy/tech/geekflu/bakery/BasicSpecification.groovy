@@ -7,4 +7,6 @@ import spock.lang.Specification
 @ActiveProfiles("test")
 class BasicSpecification extends Specification {
 
+
+
 }
