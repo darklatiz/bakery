@@ -26,6 +26,6 @@ spring:
     properties.hibernate.jdbc.lob.non_contextual_creation: true
   datasource:
     driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-    url: jdbc:tc:postgresql:10://localhost/sampleapp
+    url: jdbc:tc:postgresql:12://localhost/sampleapp
     username: postgres
     password: admin
