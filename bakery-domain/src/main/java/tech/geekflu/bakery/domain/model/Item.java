@@ -1,5 +1,6 @@
 package tech.geekflu.bakery.domain.model;
 
+import lombok.Builder;
 import tech.geekflu.bakery.domain.model.type.OrderType;
 import tech.geekflu.bakery.domain.model.type.StatusType;
 
@@ -15,6 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import java.util.Date;
 
+@Builder
 @Entity
 @Table(name = "item", schema = "bakery")
 public class Item {
