@@ -16,3 +16,5 @@ sudo docker start postgres
 ```
 sudo chmod 660 /var/run/docker.sock
 ```
+
+[Workaround explanation](https://github.com/testcontainers/testcontainers-java/issues/613)
