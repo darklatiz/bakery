@@ -110,7 +110,7 @@ class CategoryRepositorySpec extends BasicSpecification{
     def "delete a category not related with Catalog Information"() {
         given: "Add some new categories"
         Category c1 = entityManager.persist(new Category(450L, "Category nueva 1", true))
-        Category c2 = entityManager.persist(new Category(461L, "Category nueva 2", true))
+        entityManager.persist(new Category(461L, "Category nueva 2", true))
 
         when: "delete all active categories"
         categoryRepository.delete(c1)
