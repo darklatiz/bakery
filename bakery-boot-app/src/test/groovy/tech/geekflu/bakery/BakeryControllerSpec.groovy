@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.ResultActions
+import org.testcontainers.containers.PostgreSQLContainer
 import tech.geekflu.bakery.application.BakeryApplicationService
 import tech.geekflu.bakery.domain.model.CatalogInformation
 import tech.geekflu.bakery.domain.model.Category
@@ -26,7 +27,7 @@ class BakeryControllerSpec extends BasicSpecification {
     @Autowired
     private BakeryApplicationService applicationService
 
-    def "Bakery Home Success"(){
+    def "Bakery Home Success"() {
 
         given:
         applicationService.getAllCategoriesInCatalog(true) >> [
@@ -70,7 +71,6 @@ class BakeryControllerSpec extends BasicSpecification {
         then:
         result.andExpect(status().isOk())
         result.andReturn().getResponse().getContentAsString()
-
 
 
     }

@@ -1,3 +1,5 @@
+# Once you have installed DOCKER
+
 1. We create a Volume for the docker container
 sudo docker create -v /var/lib/postgresql/data --name PostgresData alpine
 
@@ -7,3 +9,10 @@ sudo docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=admin -d --vol
 3. Start the docker container
 sudo docker start postgres
 
+
+# Test Containers might not run
+## Dirty bad workaround to make test containers run
+
+```
+sudo chmod 660 /var/run/docker.sock
+```
