@@ -19,7 +19,7 @@ spring:
 
 ---
 spring:
-  profiles.active: test
+  profiles: test
   jpa:
     hibernate:
       ddl-auto: none
