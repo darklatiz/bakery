@@ -14,7 +14,7 @@ sudo docker start postgres
 ## Dirty bad workaround to make test containers run
 
 ```
-sudo chmod 660 /var/run/docker.sock
+sudo chmod 666 /var/run/docker.sock
 ```
 
 [Workaround explanation](https://github.com/testcontainers/testcontainers-java/issues/613)

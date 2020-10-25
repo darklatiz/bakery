@@ -10,9 +10,9 @@ import tech.geekflu.bakery.domain.model.Category
 @ActiveProfiles("test")
 class BasicSpecification extends Specification {
 
-    CatalogInformation getCatalogInformationBean(long id, String name, String desc, Category category) {
+    static CatalogInformation getCatalogInformationBean(long id, String name, String desc, Category category, boolean isActive=true) {
         CatalogInformation.builder()
-                .isActive(true)
+                .isActive(isActive)
                 .id(id)
                 .name(name)
                 .description(desc)
@@ -26,7 +26,7 @@ class BasicSpecification extends Specification {
                 .build()
     }
 
-    Category getCategoryBean(int id, String categoryDesc, boolean isActive) {
+    static Category getCategoryBean(int id, String categoryDesc, boolean isActive) {
         new Category(id, categoryDesc, isActive)
     }
 }
